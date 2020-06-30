@@ -19,6 +19,18 @@ const data = [
   {
     srcUrl: 'https://preview.ibb.co/kZGsLm/img8.jpg',
     previewUrl: 'https://preview.ibb.co/kZGsLm/img8.jpg'
+  },
+  {
+    srcUrl: 'https://live.staticflickr.com/65535/49912494543_cac063d0da_k.jpg',
+    previewUrl: 'https://live.staticflickr.com/65535/49912494543_c37c3fdf30_t.jpg'
+  },
+  {
+    srcUrl: 'https://live.staticflickr.com/65535/49913016581_144745fec5_k.jpg',
+    previewUrl: 'https://live.staticflickr.com/65535/49913016581_ecd7b57176_t.jpg'
+  },
+  {
+    srcUrl: 'https://live.staticflickr.com/65535/49913307822_357ec25f1d_k.jpg',
+    previewUrl: 'https://live.staticflickr.com/65535/49913307822_d2ef6a394f_t.jpg'
   }
 ];
 

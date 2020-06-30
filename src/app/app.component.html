@@ -62,7 +62,7 @@
 
 
 <app-header></app-header>
-<app-gallery></app-gallery>
+
 <mat-sidenav-container class="main-sidenav-container" (backdropClick)="generalService.toggledSideBar()">
   <mat-sidenav [mode]="mode"
                [opened]="generalService.getSideBarOpen()"
@@ -72,6 +72,7 @@
       Hello from Sidenav-Content
     </button>
   </mat-sidenav>
+  <app-gallery></app-gallery>
   <div class="div-scrollable">
     <router-outlet></router-outlet>
   </div>
