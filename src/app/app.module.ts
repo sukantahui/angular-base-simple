@@ -38,6 +38,9 @@ import { DateAdapter } from '@angular/material/core';
 import { DateFormat } from './date-format';
 import { SidebarComponent } from './pages/sidebar/sidebar.component';
 import {SidebarModule} from 'ng-sidebar';
+import { GalleryComponent } from './pages/gallery/gallery.component';
+import {GalleryModule} from 'ng-gallery';
+import { LightboxModule } from 'ng-gallery/lightbox';
 
 
 @NgModule({
@@ -55,7 +58,8 @@ import {SidebarModule} from 'ng-sidebar';
     LoaidngEllipsisComponent,
     LoaidngHourglassComponent,
     LoaidngRollerComponent,
-    SidebarComponent
+    SidebarComponent,
+    GalleryComponent
 
   ],
   imports: [
@@ -73,7 +77,9 @@ import {SidebarModule} from 'ng-sidebar';
     NgxPrintModule,
     Ng2SearchPipeModule,
     NgxPaginationModule,
-    SidebarModule
+    SidebarModule,
+    GalleryModule,
+    LightboxModule
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorInterceptor, multi: true},
               {provide: DateAdapter, useClass: DateFormat} ],

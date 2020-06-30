@@ -3,6 +3,7 @@ import {AuthService} from '../../services/auth.service';
 import {Subscription} from 'rxjs';
 import {User} from '../../models/user.model';
 import {Router} from '@angular/router';
+import {GeneralService} from '../../services/general.service';
 
 @Component({
   selector: 'app-header',
@@ -10,36 +11,12 @@ import {Router} from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit, OnDestroy {
-  @Input() deviceXs: boolean;
-  userSub: Subscription;
-  isAuthenticated = false;
-  isOwner = false;
-  isManager = false;
-  isWorker = false;
-  router: Router;
-  constructor(private authService: AuthService) { }
+  constructor(public generalService: GeneralService) { }
 
   ngOnInit(): void {
-    this.userSub = this.authService.user.subscribe(user => {
-      if (user){
-        this.isAuthenticated = user.isAuthenticated;
-        this.isOwner = user.isOwner;
-        this.isManager = user.isManager;
-        this.isWorker = user.isWorker;
-      }else{
-        this.isAuthenticated = false;
-        this.isManager = false;
-        this.isWorker = false;
-      }
-    });
   }
 
   ngOnDestroy(): void {
-    this.userSub.unsubscribe();
-  }
-
-  logout() {
-    this.authService.logout();
   }
 
   myStyle(){

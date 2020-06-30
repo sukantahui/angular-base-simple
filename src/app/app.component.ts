@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import { NgbButtonsModule } from '@ng-bootstrap/ng-bootstrap';
 import {NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
@@ -11,11 +11,13 @@ import {VERSION} from '@angular/material/core';
 // import {VERSION} from '@angular/material';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { map } from 'rxjs/operators';
+import {GeneralService} from './services/general.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit, OnDestroy{
   title = 'base-project';
@@ -27,11 +29,14 @@ export class AppComponent implements OnInit, OnDestroy{
   deviceXs: boolean;
   version = VERSION;
   mode = 'side'
-  opened = true;
+  opened = false;
   layoutGap = '64';
   fixedInViewport = true;
 
-  constructor(private bpo: BreakpointObserver, public mediaObserver: MediaObserver, private authService: AuthService){
+  constructor(private bpo: BreakpointObserver
+              , public mediaObserver: MediaObserver
+              , private authService: AuthService
+              , public generalService: GeneralService){
   }
   ngOnInit(): void {
       this.mediaSub = this.mediaObserver.media$.subscribe(
