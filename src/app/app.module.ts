@@ -36,6 +36,8 @@ import { LoaidngRollerComponent } from './shared/loaidng-roller/loaidng-roller.c
 
 import { DateAdapter } from '@angular/material/core';
 import { DateFormat } from './date-format';
+import { SidebarComponent } from './pages/sidebar/sidebar.component';
+import {SidebarModule} from 'ng-sidebar';
 
 
 @NgModule({
@@ -52,7 +54,8 @@ import { DateFormat } from './date-format';
     LoaidngRippleComponent,
     LoaidngEllipsisComponent,
     LoaidngHourglassComponent,
-    LoaidngRollerComponent
+    LoaidngRollerComponent,
+    SidebarComponent
 
   ],
   imports: [
@@ -69,7 +72,8 @@ import { DateFormat } from './date-format';
     HttpClientModule,
     NgxPrintModule,
     Ng2SearchPipeModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    SidebarModule
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorInterceptor, multi: true},
               {provide: DateAdapter, useClass: DateFormat} ],
