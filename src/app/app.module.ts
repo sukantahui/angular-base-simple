@@ -41,6 +41,8 @@ import {SidebarModule} from 'ng-sidebar';
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import {GalleryModule} from 'ng-gallery';
 import { LightboxModule } from 'ng-gallery/lightbox';
+import { GmapComponent } from './pages/gmap/gmap.component';
+import {GoogleMapsModule} from '@angular/google-maps';
 
 
 @NgModule({
@@ -59,7 +61,8 @@ import { LightboxModule } from 'ng-gallery/lightbox';
     LoaidngHourglassComponent,
     LoaidngRollerComponent,
     SidebarComponent,
-    GalleryComponent
+    GalleryComponent,
+    GmapComponent
 
   ],
   imports: [
@@ -79,7 +82,8 @@ import { LightboxModule } from 'ng-gallery/lightbox';
     NgxPaginationModule,
     SidebarModule,
     GalleryModule,
-    LightboxModule
+    LightboxModule,
+    GoogleMapsModule
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorInterceptor, multi: true},
               {provide: DateAdapter, useClass: DateFormat} ],

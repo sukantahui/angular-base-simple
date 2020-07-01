@@ -31,6 +31,10 @@ const data = [
   {
     srcUrl: 'https://live.staticflickr.com/65535/49913307822_357ec25f1d_k.jpg',
     previewUrl: 'https://live.staticflickr.com/65535/49913307822_d2ef6a394f_t.jpg'
+  },
+  {
+    srcUrl: 'https://live.staticflickr.com/65535/49913309312_2bb1060a3a_k.jpg',
+    previewUrl: 'https://live.staticflickr.com/65535/49913309312_5694ed71d8_t.jpg'
   }
 ];
 
