@@ -78,7 +78,18 @@ export class PictureCarouselComponent implements OnInit{
         srcUrl: 'https://live.staticflickr.com/65535/49913309312_2bb1060a3a_k.jpg',
         previewUrl: 'https://live.staticflickr.com/65535/49913309312_5694ed71d8_t.jpg',
         caption: '7 Image'
+      },
+      {
+        srcUrl: 'https://live.staticflickr.com/7806/32859831728_1e10bb1a74_b.jpg',
+        previewUrl: 'https://live.staticflickr.com/7806/32859831728_1e10bb1a74_t.jpg',
+        caption: '8 Image'
+      },
+      {
+        srcUrl: 'https://live.staticflickr.com/65535/50065662493_4560bd1b77_k.jpg',
+        previewUrl: 'https://live.staticflickr.com/65535/50065662493_71faa6acef_t.jpg',
+        caption: '9 Image'
       }
+
     ];
   }
 
